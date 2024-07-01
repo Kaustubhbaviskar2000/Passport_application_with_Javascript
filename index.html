@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passport Seva</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header-section {
+            background-color: white;
+            color: black;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header-section img {
+            height: 60px;
+        }
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .header-text h1, .header-text p {
+            margin: 0;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+        .navbar {
+            background-color: #007bff;
+        }
+        .main-buttons .btn {
+            width: 100%;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .vision-section {
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .info-corner, .associated-links {
+            margin-bottom: 20px;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .footer a {
+            color: #007bff;
+        }
+        .footer h5 {
+            margin-top: 0;
+        }
+        .main-buttons, .vision-section {
+            margin-top: 20px; /* Added margin-top to create space */
+        }
+        .content-section {
+            display: none;
+            margin-top: 20px;
+        }
+        .form-container {
+            background-color: #ffffff; /* White background for boxes */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            margin-bottom: 30px;
+        }
+        .hidden {
+            display: none;
+        }
+        .signup-title, .login-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .signup-form, .login-form {
+            max-width: 400px;
+            margin: 0 auto; /* Center the form horizontally */
+        }
+        .btn-signup, .btn-login {
+            font-size: 16px; /* Larger font size for button text */
+            padding: 10px 20px; /* Padding around button text */
+        }
+        .login-link, .signup-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header-section">
+    <div style="display: flex; align-items: center;">
+        <img src="satyamev.png" alt="Emblem">
+        <div class="header-text">
+            <h1>Passport Seva</h1>
+            <p>PSP Division, Ministry of External Affairs, Government of India</p>
+        </div>
+    </div>
+    <img src="pass.png" alt="Passport Seva">
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#" id="home-link">Passport Seva</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#" id="home-nav-link">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" id="about-us-link">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" id="passport-offices-link">Passport Offices</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.passportindia.gov.in/AppOnlineProject/pdf/Citizen_Charter.pdf" target="_blank">Citizens' Charter</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" id="contact-us-link">Contact Us</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container">
+    <div id="home-content">
+        <div class="row">
+            <!-- Button Section -->
+            <div class="col-md-3 main-buttons">
+                <button class="btn btn-danger" id="new-user-btn">New User Registration</button>
+                <button class="btn btn-success" id="existing-user-btn">Existing User Login</button>
+                <button class="btn btn-primary hidden" id="new-passport-btn">New Passport Application</button>
+                <button class="btn btn-secondary hidden" id="renewal-application-btn">Renewal Application</button>
+                <button class="btn btn-danger hidden" id="logout-btn">Logout</button>
+            </div>
+
+            <!-- Vision Section -->
+            <div class="col-md-9 vision-section">
+                <h2>Vision</h2>
+                <p>To deliver passport services to citizens in a timely, transparent, more accessible, reliable manner and in a comfortable environment through streamlined processes and committed, trained and motivated workforce.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Information Corner -->
+            <div class="col-md-6 info-corner">
+                <h3 class="section-title">Information Corner</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">Getting Started</li>
+                    <li class="list-group-item">FAQs</li>
+                    <li class="list-group-item">Passport Act and Rules</li>
+                    <li class="list-group-item">Quick Guides</li>
+                    <li class="list-group-item">Instructions Booklet</li>
+                    <li class="list-group-item">All India Network of Passport Services</li>
+                </ul>
+            </div>
+
+            <!-- Associated Links -->
+            <div class="col-md-6 associated-links">
+                <h3 class="section-title">Associated Links</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">HRM & Training</li>
+                    <li class="list-group-item">Passport India E-Book</li>
+                    <li class="list-group-item">Passport Seva Documentary</li>
+                    <li class="list-group-item">Passport Seva Video</li>
+                    <li class="list-group-item">Photo Gallery</li>
+                    <li class="list-group-item">Passport Patrika</li>
+                    <li class="list-group-item">Citizen Experience</li>
+                    <li class="list-group-item">Awards and Recognitions</li>
+                    <li class="list-group-item">Dignitary Feedback</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration Form -->
+    <div id="registration-form" class="content-section">
+        <div class="form-container">
+            <h2 class="signup-title">Signup</h2>
+            <form class="signup-form" id="signup-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-signup">Signup</button>
+            </form>
+            <div class="login-link">
+                <p>If you already have an account, <a href="#" id="to-login-link">login here</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Form -->
+    <div id="login-form" class="content-section">
+        <div class="form-container">
+            <h2 class="login-title">Login</h2>
+            <form class="login-form" id="login-form-element">
+                <div class="form-group">
+                    <label for="login-email">Email address</label>
+                    <input type="email" class="form-control" id="login-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" class="form-control" id="login-password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-login">Login</button>
+            </form>
+            <div class="signup-link">
+                <p>If you don't have an account, <a href="#" id="to-signup-link">sign up here</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div class="content-section" id="about-us-content">
+        <h2>About Passport Seva</h2>
+        <p>In recent years, the Government of India has taken many initiatives to usher in an era of e-Governance to improve the delivery of public services. The National e-Governance Plan (NeGP) includes many high impact e-Governance projects that have been identified as Mission Mode Projects (MMP's). One such project focuses on reforming Passport services in India.</p>
+        <p>The Ministry of External Affairs (MEA) is responsible for issuance of Passports to Indian Citizens through a network of 36 Passport offices across the Country and 190 Indian Missions and Posts abroad.</p>
+        <p>A Passport is an essential travel document for those who are traveling abroad for education, tourism, pilgrimage, medical attendance, business purposes and family visits. During the last few years, the growing economy and spreading globalization have led to an increased demand for Passport and related services. This increasing demand for passports and related services is coming from both large cities and smaller towns, creating a need for wider reach and availability. To augment and improve the delivery of passport services to Indian citizens, the Ministry of External Affairs (MEA) launched the Passport Seva Project (PSP) in May 2010.</p>
+        <p>The project has been implemented in a Public Private Partnership (PPP) mode with Tata Consultancy Services, selected through a public competitive procurement process. Under this program, the sovereign and fiduciary functions like verification, granting and issuing of passport have been retained by MEA. The ownership and strategic control of the core assets including data/information is with MEA.</p>
+        <p>Passport Seva enables simple, efficient and transparent processes for delivery of passport and related services. Apart from creating a countrywide networked environment for Government staff, it integrates with the State Police for physical verification of applicant's credentials and with India Post for delivery of passports.</p>
+    </div>
+
+    <!-- Passport Offices Section -->
+    <div class="content-section" id="passport-offices-content">
+        <h2>Know more about Passport Offices</h2>
+        <p>Ahmedabad, Coimbatore, Kolkata, Raipur</p>
+        <p>Amritsar, Dehradun, Kota, Ranchi</p>
+        <p>Andaman and Nicobar, Delhi, Kozhikode, Shimla</p>
+        <p>Bareilly, Ghaziabad, Lucknow, Srinagar</p>
+        <p>Bengaluru, Goa, Madurai, Surat</p>
+        <p>Bhopal, Guwahati, Mumbai, Tiruchirappalli</p>
+        <p>Bhubaneswar, Hyderabad, Nagpur, Trivandrum</p>
+        <p>Chandigarh, Jaipur, Patna, Vijayawada</p>
+        <p>Chennai, Jalandhar, Pune, Visakhapatnam</p>
+        <p>Cochin, Jammu</p>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div class="content-section" id="contact-us-content">
+        <h2>Contact for Consular and Visa Services</h2>
+        <h4>Contact for Visa Services</h4>
+        <p>Visa for foreign diplomats posted in India.</p>
+        <p>E-mail : jscpv@mea.gov.in</p>
+        <h4>Contact for Consular Services</h4>
+        <p>Shri Amit Narang</p>
+        <p>Joint Secretary (CPV)</p>
+        <p>PSP Division, Ministry of External Affairs,</p>
+        <p>Room No. 20, Patiala House Annex,</p>
+        <p>Tilak Marg, New Delhi - 110001</p>
+        <p>Fax No. : +91-11-23782821</p>
+        <p>E-mail : jscpv@mea.gov.in</p>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h5>External Links</h5>
+                <ul class="external-links">
+                    <li><a href="#">Ministry of External Affairs</a></li>
+                    <li><a href="#">National Portal of India</a></li>
+                    <li><a href="#">Visa On Arrival</a></li>
+                    <li><a href="#">Bureau of Immigration</a></li>
+                    <li><a href="#">Foreigners Division, MHA</a></li>
+                    <li><a href="#">National Voters’ Services Portal</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Legal Information</h5>
+                <ul class="external-links">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Copyright Policy</a></li>
+                    <li><a href="#">Hyperlinking Policy</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Help</h5>
+                <ul class="external-links">
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Grievance/Feedback</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Connect with Us</h5>
+                <ul class="external-links">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2024 Ministry of External Affairs, Government of India</p>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    document.getElementById('home-nav-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        showHomeContent();
+        scrollToSection('home-content');
+    });
+
+    document.getElementById('home-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        showHomeContent();
+        scrollToSection('home-content');
+    });
+
+    document.getElementById('about-us-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        hideAllContent();
+        document.getElementById('about-us-content').style.display = 'block';
+        scrollToSection('about-us-content');
+    });
+
+    document.getElementById('passport-offices-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        hideAllContent();
+        document.getElementById('passport-offices-content').style.display = 'block';
+        scrollToSection('passport-offices-content');
+    });
+
+    document.getElementById('contact-us-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        hideAllContent();
+        document.getElementById('contact-us-content').style.display = 'block';
+        scrollToSection('contact-us-content');
+    });
+
+    function hideAllContent() {
+        document.getElementById('home-content').style.display = 'none';
+        document.getElementById('about-us-content').style.display = 'none';
+        document.getElementById('passport-offices-content').style.display = 'none';
+        document.getElementById('contact-us-content').style.display = 'none';
+        document.getElementById('registration-form').style.display = 'none';
+        document.getElementById('login-form').style.display = 'none';
+    }
+
+    function showHomeContent() {
+        hideAllContent();
+        document.getElementById('home-content').style.display = 'block';
+    }
+
+    function scrollToSection(sectionId) {
+        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Handle form switching
+    document.getElementById('new-user-btn').addEventListener('click', function() {
+        document.getElementById('home-content').style.display = 'none';
+        document.getElementById('registration-form').style.display = 'block';
+        scrollToSection('registration-form');
+    });
+
+    document.getElementById('existing-user-btn').addEventListener('click', function() {
+        document.getElementById('home-content').style.display = 'none';
+        document.getElementById('login-form').style.display = 'block';
+        scrollToSection('login-form');
+    });
+
+    document.getElementById('to-login-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('registration-form').style.display = 'none';
+        document.getElementById('login-form').style.display = 'block';
+        scrollToSection('login-form');
+    });
+
+    document.getElementById('to-signup-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('login-form').style.display = 'none';
+        document.getElementById('registration-form').style.display = 'block';
+        scrollToSection('registration-form');
+    });
+
+    document.getElementById('logout-btn').addEventListener('click', function() {
+        document.getElementById('new-user-btn').classList.remove('hidden');
+        document.getElementById('existing-user-btn').classList.remove('hidden');
+        document.getElementById('new-passport-btn').classList.add('hidden');
+        document.getElementById('renewal-application-btn').classList.add('hidden');
+        document.getElementById('logout-btn').classList.add('hidden');
+        showHomeContent();
+        scrollToSection('home-content');
+    });
+
+    // Mock login success
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        document.getElementById('login-form').style.display = 'none';
+        document.getElementById('home-content').style.display = 'block';
+        document.getElementById('new-user-btn').classList.add('hidden');
+        document.getElementById('existing-user-btn').classList.add('hidden');
+        document.getElementById('new-passport-btn').classList.remove('hidden');
+        document.getElementById('renewal-application-btn').classList.remove('hidden');
+        document.getElementById('logout-btn').classList.remove('hidden');
+        scrollToSection('home-content');
+    });
+
+    document.getElementById('new-passport-btn').addEventListener('click', function() {
+        window.location.href = 'new_passport_application.html';
+    });
+
+    document.getElementById('renewal-application-btn').addEventListener('click', function() {
+        window.location.href = 'renewel_application.html';
+    });
+
+    // Mock registration success
+    document.getElementById('signup-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        document.getElementById('registration-form').style.display = 'none';
+        document.getElementById('login-form').style.display = 'block';
+        scrollToSection('login-form');
+    });
+
+    $('#home-link, #home-nav-link').click(function() {
+        $('#home-content').show();
+        $('#registration-form').hide();
+        $('#login-form').hide();
+    });
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renewal Application Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+        .navbar {
+            background-color: #007bff;
+        }
+        
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px 0;
+        }
+        .footer .col-md-3 h5 {
+            color: #ffffff;
+        }
+        .footer .col-md-3 ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer .col-md-3 ul li {
+            margin-bottom: 10px;
+        }
+        .footer .col-md-3 ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .footer .col-md-3 ul li a:hover {
+            text-decoration: underline;
+        }
+      .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        .form-container h3 {
+            color: #343a40;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        .form-container label {
+            font-weight: bold;
+            color: #343a40;
+        }
+        .form-control {
+            font-size: 1rem;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+        .header-section img {
+            height: 60px;
+        }
+
+        .header-section {
+            background-color: white;
+            color: black;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .header-text h1, .header-text p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-section">
+    <div style="display: flex; align-items: center;">
+        <img src="satyamev.png" alt="Emblem">
+        <div class="header-text">
+            <h1>Passport Seva</h1>
+            <p>PSP Division, Ministry of External Affairs, Government of India</p>
+        </div>
+    </div>
+    <img src="pass.png" alt="Passport Seva">
+</div>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Passport Seva</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Passport Offices</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.passportindia.gov.in/AppOnlineProject/pdf/Citizen_Charter.pdf" target="_blank">Citizens' Charter</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <div class="container">
+        <div class="text-center my-4">
+            <h1>Renewal Application Form</h1>
+        </div>
+
+        <div class="form-container">
+            <form>
+                <h3>1. Applicant Details</h3>
+                <div class="form-group">
+                    <label for="applicantName">1.1 Applicant's Name</label>
+                    <input type="text" class="form-control" id="applicantName" placeholder="Enter applicant's name">
+                </div>
+                <div class="form-group">
+                    <label for="dob">1.2 Date of Birth</label>
+                    <input type="date" class="form-control" id="dob">
+                </div>
+                <div class="form-group">
+                    <label>1.3 Gender</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male">
+                        <label class="form-check-label" for="genderMale">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
+                        <label class="form-check-label" for="genderFemale">Female</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="genderOther" value="other">
+                        <label class="form-check-label" for="genderOther">Other</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="nationality">1.4 Nationality</label>
+                    <input type="text" class="form-control" id="nationality" placeholder="Enter nationality">
+                </div>
+                <div class="form-group">
+                    <label for="maritalStatus">1.5 Marital Status</label>
+                    <select class="form-control" id="maritalStatus">
+                        <option>Single</option>
+                        <option>Married</option>
+                        <option>Divorced</option>
+                        <option>Widowed</option>
+                    </select>
+                </div>
+
+                <h3>2. Passport Details</h3>
+                <div class="form-group">
+                    <label for="passportNumber">2.1 Passport Number</label>
+                    <input type="text" class="form-control" id="passportNumber" placeholder="Enter passport number">
+                </div>
+                <div class="form-group">
+                    <label for="issueDate">2.2 Date of Issue</label>
+                    <input type="date" class="form-control" id="issueDate">
+                </div>
+                <div class="form-group">
+                    <label for="expiryDate">2.3 Date of Expiry</label>
+                    <input type="date" class="form-control" id="expiryDate">
+                </div>
+                <div class="form-group">
+                    <label for="placeOfIssue">2.4 Place of Issue</label>
+                    <input type="text" class="form-control" id="placeOfIssue" placeholder="Enter place of issue">
+                </div>
+                <div class="form-group">
+                    <label for="reasonForRenewal">2.5 Reason for Renewal</label>
+                    <textarea class="form-control" id="reasonForRenewal" rows="3" placeholder="Enter reason for renewal"></textarea>
+                </div>
+
+                <h3>3. Contact Details</h3>
+                <div class="form-group">
+                    <label for="presentAddress">3.1 Present Residential Address</label>
+                    <input type="text" class="form-control" id="presentAddress" placeholder="Enter present residential address">
+                </div>
+                <div class="form-group">
+                    <label for="mobileNumber">3.2 Mobile Number</label>
+                    <input type="text" class="form-control" id="mobileNumber" placeholder="Enter mobile number">
+                </div>
+                <div class="form-group">
+                    <label for="email">3.3 E-mail ID</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+
+                <h3>4. Fee Details</h3>
+                <div class="form-group">
+                    <label for="amountPaid">4.1 Amount Paid (Rs.)</label>
+                    <input type="text" class="form-control" id="amountPaid" placeholder="Enter amount paid">
+                </div>
+                <div class="form-group">
+                    <label for="paymentDate">4.2 Date of Payment</label>
+                    <input type="date" class="form-control" id="paymentDate">
+                </div>
+                <div class="form-group">
+                    <label for="receiptNumber">4.3 Receipt Number</label>
+                    <input type="text" class="form-control" id="receiptNumber" placeholder="Enter receipt number">
+                </div>
+                <div class="form-group">
+                    <label for="bankBranch">4.4 Name of Bank and Branch</label>
+                    <input type="text" class="form-control" id="bankBranch" placeholder="Enter bank and branch name">
+                </div>
+
+                <h3>5. Self-Declaration</h3>
+                <p>I hereby declare that the information provided in this form is true and correct to the best of my knowledge and belief. I am aware that providing false information is an offense under the Passports Act, 1967.</p>
+                <div class="form-group">
+                    <label for="declarationPlace">Place</label>
+                    <input type="text" class="form-control" id="declarationPlace" placeholder="Enter place">
+                </div>
+                <div class="form-group">
+                    <label for="declarationDate">Date</label>
+                    <input type="date" class="form-control" id="declarationDate">
+                </div>
+                <div class="form-group">
+                    <label for="applicantSignature">Signature/ Thumb Impression</label>
+                    <input type="text" class="form-control" id="applicantSignature" placeholder="Enter signature or thumb impression">
+                </div>
+
+                <input type="submit" class="btn btn-primary" value="Submit">
+                <button type="button" class="btn btn-secondary " id="cancel-btn">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>External Links</h5>
+                    <ul>
+                        <li><a href="#">Ministry of External Affairs</a></li>
+                        <li><a href="#">National Portal of India</a></li>
+                        <li><a href="#">Visa On Arrival</a></li>
+                        <li><a href="#">Bureau of Immigration</a></li>
+                        <li><a href="#">Foreigners Division, MHA</a></li>
+                        <li><a href="#">National Voters’ Services Portal</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Legal Information</h5>
+                    <ul class="external-links">
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Copyright Policy</a></li>
+                        <li><a href="#">Hyperlinking Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Help</h5>
+                    <ul class="external-links">
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Grievance/Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Connect with Us</h5>
+                    <ul class="external-links">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p>&copy; 2024 Ministry of External Affairs, Government of India</p>
+        </div>
+
+        <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    |
+    <script>
+        document.getElementById('cancel-btn').addEventListener('click', function() {
+            window.location.href = 'demo.html';
+        });
+    </script>
+</body>
+</html>
